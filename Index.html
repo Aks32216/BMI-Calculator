@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <label class="labels" for="height">Height(cm)</label><input class="inputs" type="number" id="height">
+      <label class="labels" for="weight">Weight(Kg)</label><input class="inputs" type="number" id="weight">
+      <button class="button" type="button" id="button">Calculate BMI</button>
+      <p  class="bmi" id="BMI"></p>
+      <p id="Suggestion"></p>
+    </div>
+    <script type="text/javascript">
+        let underweight=`<h2>You are Under Weight</h2>
+            <ul>
+              <li>Add Healthy Calories and Focus On your Diet</li>
+              <li>Don't Eat Too Much Junk Food</li>
+              <li>Focus on Your Eating Behaviour</li>
+            </ul>
+            <h2>Stay Healthy, Stay Fit</h2>
+        `;
+        let good=`<h2>You are Normal</h2>
+            <ul>
+              <li>Maintain Your Diet as You are Doing So</li>
+              <li>Excercise Daily to maintain your Healthy Body</li>
+              <li>Don't get into habbit of Eating Junk Food</li>
+            </ul>
+            <h2>Stay Healthy, Stay Fit</h2>
+        `;
+        let obese=`<h2>You are Obese</h2>
+            <ul>
+              <li>Try to Reduce calories in Your Diet</li>
+              <li>Excercise at least 1 Hour daily</li>
+              <li>Focus on Your Eating Behaviour</li>
+            </ul>
+            <h2>Stay Healthy, Stay Fit</h2>
+        `;
+
+        let button=document.querySelector("#button");
+        button.addEventListener("click",()=>{
+          const height=document.querySelector("#height").value;
+          const weight=document.querySelector("#weight").value;
+          const result=document.querySelector("#BMI");
+          if(height==='' || height<0 || isNaN(height))
+            result.innerText="Please Provide Valid Height";
+          else if(weight==='' || weight<0 || isNaN(weight)){
+            result.innerText="Please Provide Valid Weight";
+            Suggestion.innerHTML=``;
+          }
+          else {
+            const bmi=(weight/((height*height)/10000)).toFixed(2);
+            result.innerText=  `BMI : ${bmi}`;
+            if(bmi<18.6)
+              Suggestion.innerHTML=underweight;
+            else if(bmi>24.9)
+              Suggestion.innerHTML=obese;
+            else
+              Suggestion.innerHTML=good;
+          }
+        })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Rampart+One&display=swap');
+/* font-family: 'IM Fell English SC', serif;
+font-family: 'Rampart One', cursive; */
+*{
+  box-sizing: border-box;
+}
+
+html {
+  background: url(images.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'IM Fell English SC', serif;
+  color:#fff;
+}
+
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:#F4A442;
+}
+
+.container{
+  height: 60vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+h1{
+  font-family: 'Rampart One', cursive;
+}
+
+.inputs{
+  width: 50%;
+  margin: 1rem auto;
+  padding: 7px;
+  border-radius: 10px;
+}
+
+.labels{
+  font-size: 1.5rem;
+}
+
+.button{
+  width: 25%;
+  margin: 1rem auto;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #fff;
+  color: #000;
+}
+
+.button:hover{
+  background-color: #000;
+  color: #fff;
+}
+
+.bmi{
+  font-size: 1.5rem;
+  margin: 0px;
+}
+
+ul{
+  text-align: left;
+}
