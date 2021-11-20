@@ -5,19 +5,14 @@ font-family: 'Rampart One', cursive; */
   box-sizing: border-box;
 }
 
-html {
-  background: url(images.jpeg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
 body{
+  background-image: url(images.jpg);
   padding: 0;
   margin: 0;
   font-family: 'IM Fell English SC', serif;
   color:#fff;
+  font-size: 120%;
 }
 
 .container{
@@ -25,7 +20,6 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color:#F4A442;
 }
 
 .container{
@@ -53,6 +47,7 @@ h1{
 }
 
 .button{
+  font-family: 'IM Fell English SC', serif;
   width: 25%;
   margin: 1rem auto;
   padding: 5px;
